@@ -1,17 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+// src/App.tsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/layouts/Layout';
+import Home from './pages/Home';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-       <h1 className='text-4xl font-bold text-blue-900'>Getting started...</h1>
-      
-      </section>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          {/* Add other routes later: /fleet, /deals, /contact */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
