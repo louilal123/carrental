@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <section id="center">
-       <h1 className='text-4xl font-bold text-blue-900'>Get started</h1>
+       <h1 className='text-4xl font-bold text-blue-900'>Getting started...</h1>
       
       </section>
     </>
